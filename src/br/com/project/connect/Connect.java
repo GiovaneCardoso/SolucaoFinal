@@ -12,7 +12,7 @@ public class Connect
 	 */
 	public static Connection build() throws Exception 
 	{
-		return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86063","fiap20");
+		return DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
 	}
 	
 }

@@ -37,13 +37,13 @@ public class RegistraPergunta extends HttpServlet {
 			throws ServletException, IOException {
 		PerguntaCategoria c = new PerguntaCategoria();
 		c.setTudo(1, "Teste");
-		String titulo = request.getParameter("receberTitulo");
+		String titulo = request.getParameter("titulo");
 
-		String pergunta = request.getParameter("receberPergunta");
-		String resposta = request.getParameter("receberResposta");
-		int id = Integer.parseInt(request.getParameter("receberid"));
+		String pergunta = request.getParameter("pergunta");
+		String resposta = request.getParameter("resposta");
+		/*int id = Integer.parseInt(request.getParameter("receberid"));*/
 		Pergunta p = new Pergunta();
-		p.setTudo(id, c, titulo, pergunta, resposta);
+		p.setTudo(3, c, titulo, pergunta, resposta);
 		
 		try {
 			if (PerguntaBO.novo(p)) {
@@ -56,7 +56,7 @@ public class RegistraPergunta extends HttpServlet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher("inserir.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("perguntas.jsp");
 		dispatcher.forward(request, response);
 	}
 }

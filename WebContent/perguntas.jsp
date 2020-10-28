@@ -50,6 +50,7 @@
     <main class="container">
         <div class="action-bot">
             <h2>Gerenciamento de perguntas e respostas</h2>
+            <p>${message}</p>
             <div class="add-question-btn">
             <button class="add-question">Adicionar</button>
         </div>
@@ -106,7 +107,7 @@
         		<h3>Insira sua pergunta:</h3>
                 <span class="close-modal-overlay">X</span>
         	</div>
-        	<form>
+        	<form method="POST" action="${pageContext.request.contextPath}/registrapergunta" >
         		<label>Titulo</label>
         		<input type="text" name="titulo">
         		<label>Pergunta</label>
