@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,36 +55,36 @@
         <div class="infos-container">
             <div class="bot-infos">
                 <h1>Entenda mais sobre o CHATBOT</h1>
-                <p>O chatbot Ã© uma soluÃ§Ã£o que complementa o SAC, sendo assim, juntamente ao SAC, tem como objetivo
+                <p>O chatbot é uma solução que complementa o SAC, sendo assim, juntamente ao SAC, tem como objetivo
                     sanar
-                    todas as dÃºvidas do usuario unicamente na plataforma digital, atravÃ©s de perguntas e respostas prÃ©
-                    cadastradas, Ã© criado um sistema automatico, facil e rÃ¡pido de atendimento ao cliente</p>
+                    todas as dúvidas do usuario unicamente na plataforma digital, através de perguntas e respostas pré
+                    cadastradas, é criado um sistema automatico, facil e rápido de atendimento ao cliente</p>
             </div>
             <div class="bot-other-infos">
-                <h2>E se o usuÃ¡rio nÃ£o encontrar sua dÃºvida pelo CHATBOT?</h2>
-                <p>Ã‰ aqui que entramos em aÃ§Ã£o! respondendo suas dÃºvidas atravÃ©s do chat online.</p>
-                <p>O chat online tem como funÃ§Ã£o ter um chat ao vivo, onde um atendente pode atender um chamado de um
-                    cliente que teve uma dÃºvida nÃ£o sanada. A partir daÃ­, teremos profissionais reais que conseguem
+                <h2>E se o usuário não encontrar sua dúvida pelo CHATBOT?</h2>
+                <p>É aqui que entramos em ação! respondendo suas dúvidas através do chat online.</p>
+                <p>O chat online tem como função ter um chat ao vivo, onde um atendente pode atender um chamado de um
+                    cliente que teve uma dúvida não sanada. A partir daí, teremos profissionais reais que conseguem
                     resolver
                     esses problemas
-                    <a href="dashboard.html" class="control-link"><button class="control-btn">Ir ao painel de controle</button></a>
+                    <a href="perguntas.jsp" class="control-link"><button class="control-btn">Ir ao painel de controle</button></a>
             </div>
             <div class="platform-infos">
                 <h2>Entendendo a plataforma</h2>
-                <h3>AdministraÃ§Ã£o - ChatBot</h3>
+                <h3>Administração - ChatBot</h3>
                 <div class="img-bot">
                     <img src="imagens/answer.png">
-                    <p>Na pagina de gestÃ£o do bot, vocÃª pode consultar todas as perguntas jÃ¡ cadastradas e suas
+                    <p>Na pagina de gestão do bot, você pode consultar todas as perguntas já cadastradas e suas
                         respectivas
-                        respostas. E atravÃ©s das aÃ§Ãµes do canto direito, pode alterar essas informaÃ§Ãµes ou atÃ© mesmo
-                        deletar, caso necessÃ¡rio</p>
+                        respostas. E através das ações do canto direito, pode alterar essas informações ou até mesmo
+                        deletar, caso necessário</p>
                 </div>
-                <h3>AdministraÃ§Ã£o - Live chat</h3>
+                <h3>Administração - Live chat</h3>
                 <div class="img-attendance">
                     <img src="imagens/atendimento-sala.png">
-                    <p>Na pagina de gestÃ£o de atendimento, vocÃª pode consultar todas as pessoas que naquele momento
-                        estÃ£o
-                        precisando de sua ajuda, e clicando no botÃ£o "IR" ao lado da pessoa, vocÃª serÃ¡ redirecionado
+                    <p>Na pagina de gestão de atendimento, você pode consultar todas as pessoas que naquele momento
+                        estão
+                        precisando de sua ajuda, e clicando no botão "IR" ao lado da pessoa, você será redirecionado
                         para um
                         chat com aquela pessoa</p>
 
@@ -98,18 +100,18 @@
         </div>
         <div class="chat-container">
             <div class="bot-answer-item">
-                <p class="bot-answer">OlÃ¡, para podermos te ajudar melhor, selecione abaixo a opÃ§Ã£o sobre o que estÃ¡ buscando!</p>
+                <p class="bot-answer">Olá, para podermos te ajudar melhor, selecione abaixo a opção sobre o que está buscando!</p>
                 <div class="bot-options">
-                    <button id="option1" class="option1" >OpÃ§Ã£o 1</button>
-                    <button>OpÃ§Ã£o 2</button>
+                    <button id="option1" class="option1" >Opção 1</button>
+                    <button>Opção 2</button>
                 </div>
             </div>
             <div class="bot-answer-item hidden">
                 <p class="bot-answer">Certo, agora selecione o tipo de problema que encontrou</p>
                 <div class="bot-options">
-                    <button id="option1" class="option1" >OpÃ§Ã£o 1</button>
-                    <button>OpÃ§Ã£o 2</button>
-                    <button>OpÃ§Ã£o 3</button>
+                    <button id="option1" class="option1" >Opção 1</button>
+                    <button>Opção 2</button>
+                    <button>Opção 3</button>
                 </div>
             </div>
             <div class="chat-questions">
@@ -123,7 +125,7 @@
             <div class="content">
                 <div class="footer-content">
                     <span>
-                        Â© 2020 Movida Aluguel de Carros | Todos os direitos reservados.
+                        © 2020 Movida Aluguel de Carros | Todos os direitos reservados.
                     </span>
                     <div class="divider-footer"></div>
                     <ul>

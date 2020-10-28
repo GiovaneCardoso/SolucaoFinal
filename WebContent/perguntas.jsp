@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
                     <a href="#"><img src="imagens/hamb-menu-white.png"></a>
                 </div>
                 <div class="logo">
-                    <a href="#"><img src="imagens/movida-white.png"></a>
+                    <a href="index.jsp"><img src="imagens/movida-white.png"></a>
                 </div>
             </div>
             <div class="menu-right">
@@ -59,7 +61,7 @@
                             <p>Resposta:</p>
                         </div>
                         <div class="actions">
-                            <p>AÃ§Ãµes:</p>
+                            <p>Ações:</p>
                         </div>
                     </div>
                     <div class="table-content">
@@ -102,7 +104,7 @@
             <div class="content">
                 <div class="footer-content">
                     <span>
-                        Â© 2020 Movida Aluguel de Carros | Todos os direitos reservados.
+                        © 2020 Movida Aluguel de Carros | Todos os direitos reservados.
                     </span>
                     <div class="divider-footer"></div>
                     <ul>
