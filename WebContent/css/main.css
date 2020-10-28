@@ -1,0 +1,600 @@
+* {
+    outline: none;
+}
+header {
+    background: #f97d00;
+}
+main {
+    font-family: Roboto;
+}
+.login {
+    margin: 30px 0;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+footer {
+    margin-top: 50px;
+}
+
+/* Header*/
+.shell {
+    max-width: 1480px;
+    padding: 10px 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    margin-left: 34px;
+}
+.menu-right i {
+    top: 5px;
+    left: -29px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+}
+
+.menu-right {
+    color: #fff;
+    display: flex;
+    font-family: montserrat;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-right a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-right div {
+    position: relative;
+}
+
+.reserve {
+    margin: 0 70px;
+}
+.contact-icon {
+    background: url('../imagens/header-sprites.png') -57px -10px;
+}
+.reserve-icon {
+    background: url('../imagens/header-sprites.png') -10px -10px;
+
+}
+.user-icon {
+    background: url('../imagens/header-sprites.png') -10px -55px;
+
+}
+/* /Header */
+/* Home */
+.home {
+    max-width: 1480px;
+    margin: 50px auto;
+}
+.home h1, h2 {
+    font-size: 32px;
+    color: #fb6e12;
+}
+.home h3 {
+    font-size: 22px;
+}
+.home .infos-container img {
+    margin: 50px 0;
+}
+.control-link {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.control-link button {
+    padding: 10px 50px;
+    border-radius: 22px;
+    border: none;
+    font-size: 20px;
+    background: #fb6e12;
+    color: #fff;
+    cursor: pointer;
+}
+.main-banner img {
+    width: 100%;
+}
+/* /Home */
+/* BOT */
+.bot-container {
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border: 1px solid #c5c5c5;
+    box-shadow: 37px 46px 51px 37px black;
+}
+
+.bot-header {
+    display: flex;
+    justify-content: center;
+}
+
+.bot-header img {
+    width: 50px;
+}
+
+.bot-header {
+    border-bottom: 1px solid;
+}
+
+.chat-container {
+    padding: 0 20px;
+    background: #f97d00;
+    height: 423px;
+}
+
+.bot-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bot-options button {
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid;
+    color: #000;
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+
+.bot-container i {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 1px solid;
+    padding: 10px 13px;
+    font-size: 14px;
+    border-radius: 50%;
+    font-style: normal;
+}
+i.submit-question {
+    top: 4px;
+}
+.bot-header.closed {
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+.chat-container p {
+    margin: 0;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 24px;
+}
+.chat-questions {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    left: 0;
+}
+
+.chat-questions input {
+    width: 100%;
+    height: 40px;
+    border: none;
+}
+/* /BOT */
+
+/* Login */
+
+.sign-box {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 350px;
+    padding: 50px;
+    border: 1px solid #a5a5a5;
+    flex-direction: column;
+    background: #fff;
+}
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-self: normal;
+}
+
+.login-box input {
+    outline: none;
+    height: 30px;
+    text-indent: 50px;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+}
+.login-box input:focus {
+border-color: #fb6e12;
+}   
+i.fas {
+    position: absolute;
+    top: 146px;
+    left: 315px;
+}
+.logo-inner {
+    text-align: center;
+}
+
+.container {
+    max-width: 1480px;
+    margin: 0 auto;
+}
+
+.login-box label {
+    margin: 15px 0;
+    font-family: roboto;
+}
+input[type="submit"] {
+    max-width: 220px;
+    text-indent: initial;
+    width: 100%;
+    margin: 50px auto 0;
+    color: #fff;
+    background: #fb6e12;
+    border-radius: 22px;
+    height: 35px;
+    border: 1px solid #fb6e12;
+    cursor: pointer;
+}
+a.forgot-pass {
+    color: #fb6e12;
+}
+.register-box {
+    max-width: 220px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+a.register-link {
+    width: 100%;
+}
+
+button.register-btn {
+    width: 100%;
+    text-transform: uppercase;
+    color: #fb6e12;
+    height: 35px;
+    background: #fff;
+    border-radius: 22px;
+    border: 1px solid #fb6e12;
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-header {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.img-cpf {
+    position: absolute;
+    width: 17px;
+    height: 15px;
+    background: url('../imagens/login-sprites.png') -10px -9px;
+    top: 60px;
+    left: 20px;
+}
+.img-pass {
+    position: absolute;
+    width: 17px;
+    height: 15px;
+    background: url('../imagens/login-sprites.png') -46px -9px;
+    top: 145px;
+    left: 20px;
+}
+input.submit-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+button.register-btn:hover {
+    opacity: 0.9;
+    color: #fff;
+    background: #fb6e12;
+    border: none;
+}
+/* /Login */
+/* Salas */
+.table-header-sala {
+    display: grid;
+    grid-template-columns: 10% 30% 50% 10%;
+    border-bottom: 1px solid;
+}
+.person-infos div {
+    text-align: center;
+}
+
+.person-infos p {
+    text-align: center;
+}
+
+button.chat-btn {
+    width: 100%;
+    height: 100%;
+    background: #fb6e12;
+    border: none;
+    color: #fff;
+}
+.person-infos {
+    display: grid;
+    grid-template-columns: 10% 30% 50% 10%;
+}
+.person-infos p {
+    border-right: 1px solid;
+    margin: 0;
+    padding: 10px;
+}
+
+.table-container-sala {
+    border: 1px solid;
+}
+
+.table-header-sala div:not(:last-child) {
+    border-right: 1px solid;
+}
+.table-header-sala div {
+    text-align: center;
+}
+
+
+/* /Salas */
+
+/* Chat bot */
+.attendance-infos {
+    background: #f97d00;
+}
+.attendance-infos p {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+.clerk {
+    border: 1px solid;
+}
+.chat-box-submit {
+    border: none;
+    border-top: 1px solid;
+    text-indent: 32px;
+}
+.chat-contain h1 {
+text-align: center;
+    margin-top: 0;
+    padding-top: 30px;
+}
+.attendance-infos h2 {
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 10px;
+}
+.chat-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.chat {
+    height: 560px;
+    background: #fff;
+    display: flex;
+    align-items: flex-end;
+}
+.contain-all {
+    background: url('../imagens/chat-bg.jpg');
+    padding-bottom: 50px;
+    position: fixed;
+    width: 100%;
+
+}
+
+.submit-box {
+    display: flex;
+    width: 100%;
+}
+
+input.submit-btn-chat {
+    margin: 0;
+    border-radius: 0;
+    height: 45px;
+}
+
+.submit-box input[type="text"] {width: 100%;}
+/* /Chat Bot */
+
+/* Dashboard */
+
+.attendance {
+    BORDER: 1PX SOLID black;
+    FONT-SIZE: 18PX;
+    box-shadow: 2px 1px 15px -3px black;
+    display: inline;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 20px;
+}
+.adm-bot {
+    background: url('../imagens/technology.jpg');
+    height: 300px;
+}
+.adm-bot p {
+    text-align: center;
+    color: #f97d00   ;
+    padding: 50px 0;
+    font-size: 26px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.adm-bot a button {
+    padding: 15px 110px;
+    border-radius: 22px;
+    border: none;
+    color: #f97d00;
+    font-weight: bold;
+    font-size: 20px;
+    border: 0px solid #f97d00;
+    cursor: pointer;
+}
+.adm-bot a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    cursor: pointer;
+}.adm-bot a:hover {
+opacity: 0.8;
+}
+.bot-admin {
+    margin-bottom: 60px;
+}
+.content-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.content-head h1 {
+    margin-left: 15px;
+}
+.content-head img {
+    width: 50px;
+}
+
+.chat-link {
+    margin-bottom: 150px;
+}
+.attendance-link a {
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.attendance-link a .attendance {
+    FONT-SIZE: 18PX;
+    box-shadow: 2px 1px 15px -3px black;
+    display: inline;
+    z-index: 2;
+    padding: 10px 35px;
+    border-radius: 20px;
+    background: #f97d00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* /Dashboard */
+/* Bot Crud */
+
+.table-all {
+    border: 1px solid black;
+    padding: 0 30px;
+}
+
+.table-header {
+
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+}
+.table-header div:not(:last-child) {
+    border-right: 1px solid #4444;
+}
+.table-header div {
+    text-align: center;
+    padding: 0 10px;
+}
+.table-header div p {
+font-weight: bold;
+}
+.question-content {
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    border: 1px solid #4444;
+    border-right: none;
+    border-left: none;
+
+}
+.action-bot {
+    margin-bottom: 60px;
+}
+
+.question-content p {
+    margin: 0;
+    padding: 15px 10px;
+    border-right: 1px solid #4444;
+}
+.add-question-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+button.add-question {
+    padding: 10px 128px;
+    border-radius: 10px;
+    border: none;
+    background: #f97d00;
+    color: #fff;
+    cursor: pointer;
+}
+.bot-actions img {
+    width: 25px;
+}
+
+.bot-actions {
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+/* /Bot Crud */
+
+
+
+/* Footer */
+footer {
+    background: #fb6e12;
+
+}
+.footer-site {
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 10px 40px;
+
+}
+.footer-site .content {
+    display: flex;
+    justify-content: center;    
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+.footer-content ul  {
+    display: flex
+}
+.footer-content ul li {
+    margin-left: 10px;
+    list-style: none;
+}
+
+
+
+/* /Footer */
+
