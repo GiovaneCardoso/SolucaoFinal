@@ -1,10 +1,11 @@
 $(document).ready(function(){
     verifyTypePass();
-    cpfMask();
     newOption();
     closeModal();
     openModal();
     submitMessage();
+	openModalIndex();
+	closeModalIndex();
     function verifyTypePass() {
     $('.fas').on('click', function() {
         if($(this).hasClass('fa-eye')) {
@@ -18,18 +19,8 @@ $(document).ready(function(){
                 }
         })
     }
-    function cpfMask() {
-        $('.cpf-label').mask('000.000.000-00', {reverse: true});
 
-    }
-    $('.main-banner').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        arrows: false,
-        // centerMode: true
-    })
+
 
     function newOption() {
         $(".option1").on('click', function() {
@@ -51,6 +42,7 @@ $(document).ready(function(){
 
         })
     }
+
     function submitMessage() {
         $(".submit-question").on("click", function() {
             let html = `
@@ -62,6 +54,19 @@ $(document).ready(function(){
             // console.log($(".sendMessage")[0].value)
         })
     }
+	function openModalIndex() {
+		$(".add-question").on("click", function() {
+			$(".answer-modal").removeClass("hidden");
+			
+		})
+	}
+	function closeModalIndex() {
+		$(".close-modal-overlay").on("click", function() {
+			$(".answer-modal").addClass("hidden");
+
+		})
+	}
+	
 
     
 

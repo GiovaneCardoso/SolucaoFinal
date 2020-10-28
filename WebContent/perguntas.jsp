@@ -9,6 +9,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="imagens/favicon.webp" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+    <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -96,6 +99,28 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="hidden answer-modal">
+        <div class="overlay">
+        	<div class="overlay-header">
+        		<h3>Insira sua pergunta:</h3>
+                <span class="close-modal-overlay">X</span>
+        	</div>
+        	<form>
+        		<label>Titulo</label>
+        		<input type="text" name="titulo">
+        		<label>Pergunta</label>
+        		
+	       		<input type="text" name="pergunta">
+        		<label>Resposta</label>
+	       		
+	       		<input type="text" name="resposta">
+	       		
+	       		<button class="overlay-btn">Salvar</button>
+        		
+        	</form>
+        </div>
+
         </div>
 
     </main>
