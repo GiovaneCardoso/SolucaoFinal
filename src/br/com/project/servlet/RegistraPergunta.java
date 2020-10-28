@@ -36,20 +36,19 @@ public class RegistraPergunta extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PerguntaCategoria c = new PerguntaCategoria();
-		c.setTudo(1, "Teste");
+		c.setTudo(2, "teste");
 		String titulo = request.getParameter("titulo");
 
 		String pergunta = request.getParameter("pergunta");
 		String resposta = request.getParameter("resposta");
 		/*int id = Integer.parseInt(request.getParameter("receberid"));*/
 		Pergunta p = new Pergunta();
-		p.setTudo(3, c, titulo, pergunta, resposta);
+		p.setTudo(1, c, titulo, pergunta, resposta);
 		
 		try {
 			if (PerguntaBO.novo(p)) {
 				request.setAttribute("message",
-						"Inserido com sucesso, se precisar cadastrar" + " mais um usuário, preencha os dados abaixo: <br>"
-								+ "<a href=index.jsp>Clique para voltar para a index</a>");
+						"Inserido com sucesso, se precisar cadastrar" + " mais uma pergunta, clique em adicionar: <br>");
 			} else {
 				request.setAttribute("message", "Problema na inserção.");
 			}
