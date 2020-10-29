@@ -102,10 +102,6 @@ public class PerguntaBO
 
         PerguntaDAO dao = new PerguntaDAO();
 
-        if (pergunta.getId()<1) {
-            throw new RuntimeException("ID inválido");
-        }
-
         if (dao.encontrar(pergunta.getId()).getId()!=0) {
             throw new RuntimeException("ID já existe");
         }

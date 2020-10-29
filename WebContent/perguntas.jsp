@@ -77,7 +77,6 @@
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                 ullamco laboris nisi</p>
                             <div class="bot-actions">
-                                <img src="imagens/edit.png">
                                 <img src="imagens/delete.png">
                             </div>
 
@@ -92,7 +91,6 @@
                                 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                 ullamco laboris nisi</p>
                             <div class="bot-actions">
-                                <img src="imagens/edit.png">
                                 <img src="imagens/delete.png">
                             </div>
 
@@ -101,27 +99,46 @@
                 </div>
             </div>
         </div>
-        <div class="hidden answer-modal">
-        <div class="overlay">
-        	<div class="overlay-header">
-        		<h3>Insira sua pergunta:</h3>
-                <span class="close-modal-overlay">X</span>
-        	</div>
-        	<form method="POST" action="${pageContext.request.contextPath}/registrapergunta" >
-        		<label>Titulo</label>
-        		<input type="text" name="titulo">
-        		<label>Pergunta</label>
-        		
-	       		<input type="text" name="pergunta">
-        		<label>Resposta</label>
-	       		
-	       		<input type="text" name="resposta">
-	       		
-	       		<button class="overlay-btn">Salvar</button>
-        		
-        	</form>
+        <div class="category-actions">
+        	<button class="add-category">Adicionar Categoria</button>
         </div>
-
+        <div class="hidden answer-modal">
+	        <div class="overlay">
+	        	<div class="overlay-header">
+	        		<h3>Insira sua pergunta:</h3>
+	                <span class="close-modal-overlay">X</span>
+	        	</div>
+	        	<form method="POST" action="${pageContext.request.contextPath}/registrapergunta" >
+	        		<label>Titulo</label>
+	        		<input type="text" name="titulo">
+	        		<label>Pergunta</label>
+	        		
+		       		<input type="text" name="pergunta">
+	        		<label>Resposta</label>
+		       		
+		       		<input type="text" name="resposta">
+		       		
+		       		<button class="overlay-btn">Salvar</button>
+	        		
+	        	</form>
+	        </div>
+        </div>
+        
+       	<div class="hidden category-modal">
+	        <div class="overlay">
+	        	<div class="overlay-header">
+	        		<h3>Insira sua Categoria:</h3>
+	                <span class="close-modal-overlay-category">X</span>
+	        	</div>
+	        	<form method="POST" action="${pageContext.request.contextPath}/RegistraCategoria" >
+	        		
+	        		<label>Nome da Categoria</label>
+		       		<input type="text" name="nomeCategoria">
+		       				       		
+		       		<button class="overlay-btn">Salvar</button>
+	        		
+	        	</form>
+	        </div>
         </div>
 
     </main>

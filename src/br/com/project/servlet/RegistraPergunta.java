@@ -43,7 +43,11 @@ public class RegistraPergunta extends HttpServlet {
 		String resposta = request.getParameter("resposta");
 		/*int id = Integer.parseInt(request.getParameter("receberid"));*/
 		Pergunta p = new Pergunta();
-		p.setTudo(1, c, titulo, pergunta, resposta);
+		p.setCategoria(c);
+		p.setTitulo(titulo);
+		p.setPergunta(pergunta);
+		p.setResposta(resposta);
+		/*p.setTudo(, c, titulo, pergunta, resposta);*/
 		
 		try {
 			if (PerguntaBO.novo(p)) {

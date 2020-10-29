@@ -6,6 +6,8 @@ $(document).ready(function(){
     submitMessage();
 	openModalIndex();
 	closeModalIndex();
+	openModalCategory();
+	closeModalCategory();
     function verifyTypePass() {
     $('.fas').on('click', function() {
         if($(this).hasClass('fa-eye')) {
@@ -63,6 +65,18 @@ $(document).ready(function(){
 	function closeModalIndex() {
 		$(".close-modal-overlay").on("click", function() {
 			$(".answer-modal").addClass("hidden");
+
+		})
+	}
+	function openModalCategory() {
+		$('.add-category').on('click', function() {			
+			$(".category-modal").removeClass("hidden");
+		})
+
+	}
+	function closeModalCategory() {
+		$(".close-modal-overlay-category").on("click", function() {
+			$(".category-modal").addClass("hidden");
 
 		})
 	}

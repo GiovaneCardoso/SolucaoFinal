@@ -94,14 +94,14 @@ public class CategoriaDAO implements PadraoDAO<PerguntaCategoria>
 	 */
 	public boolean adicionar(PerguntaCategoria recurso) throws Exception {
 
-		this.statement = this.conection.prepareStatement("INSERT INTO PERGUNTA_CATEGORIA (ID, NOME) VALUES(?, ?)" );
+		this.statement = this.conection.prepareStatement("INSERT INTO PERGUNTA_CATEGORIA VALUES(seq_categ.nextval, ?)" );
 
 		/**
 		 * Set os atributos das colunas
 		 *
 		 */
-		this.statement.setInt(1, recurso.getId());
-		this.statement.setString(2, recurso.getNome());
+		/*this.statement.setInt(1, recurso.getId());*/
+		this.statement.setString(1, recurso.getNome());
 
 		return this.statement.executeUpdate() == 1;
 	}

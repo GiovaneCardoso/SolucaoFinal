@@ -125,13 +125,14 @@ public class PerguntaDAO implements PadraoDAO<Pergunta>
 	public boolean adicionar(Pergunta recurso) throws Exception {
 
 		this.statement = this.conection.prepareStatement("INSERT INTO PERGUNTAS " +
-				"(ID,CATEGORIA_ID,TITULO,PERGUNTA,RESPOSTA) VALUES(?,?,?,?,?)" );
+				" VALUES(perguntas_seq.nextval,?,?,?,?)" );
+		
 
-		this.statement.setInt(1, recurso.getId());
-		this.statement.setInt(2, recurso.getCategoria().getId());
-		this.statement.setString(3, recurso.getTitulo());
-		this.statement.setString(4, recurso.getPergunta());
-		this.statement.setString(5, recurso.getResposta());
+		/*this.statement.setInt(1, recurso.getId());*/
+		this.statement.setInt(1, recurso.getCategoria().getId());
+		this.statement.setString(2, recurso.getTitulo());
+		this.statement.setString(3, recurso.getPergunta());
+		this.statement.setString(4, recurso.getResposta());
 
 		return this.statement.executeUpdate() == 1;
 
