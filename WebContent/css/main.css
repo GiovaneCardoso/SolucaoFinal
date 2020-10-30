@@ -110,6 +110,16 @@ footer {
     align-items: center;
     backdrop-filter: blur(2px);
 }
+.category-select {
+    height: 35px;
+    margin: 30px 0;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    /* color: #fff; */
+    border-bottom: 1px solid #fff;
+}
 .category-actions {
     display: flex;
     justify-content: flex-end;

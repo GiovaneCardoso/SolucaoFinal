@@ -54,18 +54,20 @@ public class CategoriaDAO implements PadraoDAO<PerguntaCategoria>
 	 * @return
 	 * @throws Exception
 	 */
-	public List<PerguntaCategoria> listar() throws Exception{
+	public ArrayList<PerguntaCategoria> listar() throws Exception{
 		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_CATEGORIA");
 
-		List<PerguntaCategoria> lista = new ArrayList<PerguntaCategoria>();
+		ArrayList<PerguntaCategoria> lista = new ArrayList<PerguntaCategoria>();
 
 		this.result_set = this.statement.executeQuery();
 
-		while( this.result_set.next() )
+		while( this.result_set.next() ) {
 			lista.add( this.inicializaObjetoResultset() );
+		}
 
 		return lista;
 	}
+
 
 	/**
 	 *

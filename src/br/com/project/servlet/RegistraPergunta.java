@@ -36,18 +36,16 @@ public class RegistraPergunta extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PerguntaCategoria c = new PerguntaCategoria();
-		c.setTudo(2, "teste");
+		int cat_id = Integer.parseInt(request.getParameter("category"));
 		String titulo = request.getParameter("titulo");
-
 		String pergunta = request.getParameter("pergunta");
 		String resposta = request.getParameter("resposta");
-		/*int id = Integer.parseInt(request.getParameter("receberid"));*/
+		c.setTudo(cat_id, "Teste");
 		Pergunta p = new Pergunta();
 		p.setCategoria(c);
 		p.setTitulo(titulo);
 		p.setPergunta(pergunta);
 		p.setResposta(resposta);
-		/*p.setTudo(, c, titulo, pergunta, resposta);*/
 		
 		try {
 			if (PerguntaBO.novo(p)) {
