@@ -43,7 +43,7 @@ public class PalavraChaveDAO implements PadraoDAO<PerguntaPalavraChave>
 	 * @throws Exception
 	 */
 	public List<PerguntaPalavraChave> listar() throws Exception {
-		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_PALAVRAS_CHAVE");
+		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_PALAVRAS_CHAVES");
 
 		List<PerguntaPalavraChave> lista = new ArrayList<PerguntaPalavraChave>();
 
@@ -77,7 +77,7 @@ public class PalavraChaveDAO implements PadraoDAO<PerguntaPalavraChave>
 	 */
 	
 	public List<PerguntaPalavraChave> pesquisar(int id) throws Exception {
-		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_PALAVRAS_CHAVE WHERE PERGUNTA_ID = ?");
+		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_PALAVRAS_CHAVES WHERE PERGUNTA_ID = ?");
 		this.statement.setInt(1, id);
 		
 		List<PerguntaPalavraChave> lista = new ArrayList<PerguntaPalavraChave>();
@@ -101,8 +101,8 @@ public class PalavraChaveDAO implements PadraoDAO<PerguntaPalavraChave>
 	 */
 	public boolean adicionar(PerguntaPalavraChave recurso) throws Exception {
 
-		this.statement = this.conection.prepareStatement("INSERT INTO PERGUNTA_PALAVRAS_CHAVE " +
-				" VALUES(keywords_seq.nextval,?,?)" );
+		this.statement = this.conection.prepareStatement("INSERT INTO PERGUNTA_PALAVRAS_CHAVES " +
+				" VALUES(keywords_sequ.nextval,?,?)" );
 		
 
 		/*this.statement.setInt(1, recurso.getId());*/
@@ -138,7 +138,7 @@ public class PalavraChaveDAO implements PadraoDAO<PerguntaPalavraChave>
 	 * @throws Exception
 	 */
 	public int deletar(int id) throws Exception {
-		this.statement = this.conection.prepareStatement("DELETE FROM PERGUNTAS WHERE PERGUNTA_ID = ?");
+		this.statement = this.conection.prepareStatement("DELETE FROM PERGUNTA_PALAVRAS_CHAVES WHERE PERGUNTA_ID = ?");
 
 		this.statement.setInt(1, id);
 
