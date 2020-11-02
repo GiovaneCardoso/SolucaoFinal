@@ -1,5 +1,7 @@
 package br.com.project.servlet;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.project.beans.Pergunta;
 import br.com.project.beans.PerguntaCategoria;
@@ -38,7 +40,6 @@ public class PerguntaAltera extends HttpServlet {
 	 String resposta = request.getParameter("resposta");
 	 int idCategoria = Integer.parseInt(request.getParameter("idCategoria"));
 	 String nomeCategoria = request.getParameter("idCategoria");
-	 String[] palavraschave = request.getParameterValues("palavraschave");
 	 
 	 // Cria a pergunta
 	 Pergunta p = new Pergunta();
@@ -48,6 +49,15 @@ public class PerguntaAltera extends HttpServlet {
 	 pc.setNome(nomeCategoria);
 	 
 	 p.setTudo(idPergunta, pc, titulo, pergunta, resposta);
+	 
+	 //Palavrachaves
+	 List<PerguntaPalavraChave> listPalavrachave = new ArrayList<PerguntaPalavraChave>();
+	 if(request.getParameter("palavraschave") != null || request.getParameter("palavraschave").trim() != "") {
+		String[] palavraschave = request.getParameter("palavraschave").split(",");
+		for(String sPalavrachave : palavraschave) {
+			listPalavrachave.add(new PerguntaPalavraChave(0, sPalavrachave));
+		}
+	 }
 	 
 	 try {
 		 // Instância o DAO

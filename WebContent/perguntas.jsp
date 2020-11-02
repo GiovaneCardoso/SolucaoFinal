@@ -10,16 +10,19 @@
 <html lang="en">
 <%
 	ArrayList<PerguntaCategoria> listCategory = (ArrayList<PerguntaCategoria>) request.getAttribute("listCategory");
+	Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
 %>
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jquery.tagsinput.min.css">
 <link rel="icon" href="imagens/favicon.webp" type="image/x-icon">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/jquery.tagsinput.min.js"></script>
 <script src="js/main.js"></script>
 </head>
 
@@ -76,9 +79,7 @@
 						</div>
 					</div>
 							<% 
-							try {	
-							
-							Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
+							try {
 							PreparedStatement stmt = conn.prepareStatement("select * from perguntas");
 							ResultSet rs = stmt.executeQuery();
 							while(rs.next()) {
@@ -106,6 +107,8 @@
 		<div class="category-actions">
 			<button class="add-category">Adicionar Categoria</button>
 		</div>
+		
+		
 		<div class="hidden answer-modal">
 			<div class="overlay">
 				<div class="overlay-header">
@@ -114,17 +117,20 @@
 				</div>
 				<form method="POST"
 					action="${pageContext.request.contextPath}/registrapergunta">
-					<label>Titulo</label> <input type="text" name="titulo"> <label>Pergunta</label>
-
-					<input type="text" name="pergunta"> <label>Resposta</label>
-
+					<label>Titulo</label> 
+					<input type="text" name="titulo"> 
+					
+					<label>Pergunta</label>
+					<input type="text" name="pergunta"> 
+					
+					<label>Resposta</label>
 					<input type="text" name="resposta">
+					
+					
 					<label>Selecione sua categoria</label>
 					<select name="category" class="category-select">
 					<% 
 					try {	
-					
-					Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
 					PreparedStatement stmt = conn.prepareStatement("select * from pergunta_categoria");
 					ResultSet rs = stmt.executeQuery();
 					while(rs.next()) {
@@ -138,13 +144,16 @@
 					%>
 					</select>
 
-
+					<label>Palavras Chaves</label>
+					<input type="text" name="palavraschave" id="keywords"> 
+					
 					<button class="overlay-btn">Salvar</button>
 
 				</form>
 			</div>
 		</div>
 
+		<!--  Inicio- Modal de Categoria -->
 		<div class="hidden category-modal">
 			<div class="overlay">
 				<div class="overlay-header">
@@ -162,7 +171,8 @@
 				</form>
 			</div>
 		</div>
-
+		<!--  Fim: Modal de Categoria -->
+		
 	</main>
 	<footer>
 		<section class="footer-site">

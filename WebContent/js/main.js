@@ -1,30 +1,4 @@
-$(document).ready(function(){
-    verifyTypePass();
-    newOption();
-    closeModal();
-    openModal();
-    submitMessage();
-	openModalIndex();
-	closeModalIndex();
-	openModalCategory();
-	closeModalCategory();
-    function verifyTypePass() {
-    $('.fas').on('click', function() {
-        if($(this).hasClass('fa-eye')) {
-            $(this).removeClass('fa-eye');
-            $('.pass-label').attr("type", "text")
-            $(this).addClass('fa-eye-slash');
-        }else {
-            $(this).removeClass('fa-eye-slash');
-            $('.pass-label').attr("type", "password")
-            $(this).addClass('fa-eye');
-                }
-        })
-    }
-
-
-
-    function newOption() {
+function newOption() {
         $(".option1").on('click', function() {
             $(".bot-answer-item.hidden").removeClass("hidden");
             })
@@ -82,7 +56,34 @@ $(document).ready(function(){
 	}
 	
 
+$(document).ready(function(){
+    verifyTypePass();
+    newOption();
+    closeModal();
+    openModal();
+    submitMessage();
+	openModalIndex();
+	closeModalIndex();
+	openModalCategory();
+	closeModalCategory();
+    function verifyTypePass() {
+    $('.fas').on('click', function() {
+        if($(this).hasClass('fa-eye')) {
+            $(this).removeClass('fa-eye');
+            $('.pass-label').attr("type", "text")
+            $(this).addClass('fa-eye-slash');
+        }else {
+            $(this).removeClass('fa-eye-slash');
+            $('.pass-label').attr("type", "password")
+            $(this).addClass('fa-eye');
+                }
+        })
+    }
     
+    // inicializando plugin de tags 
+    $('#keywords').tagsInput({
+    	autocomplete_url: '/SolucaoMovida2/listapalavraschavesjson'
+    });
 
 })
 
