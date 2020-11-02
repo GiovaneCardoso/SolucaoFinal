@@ -81,7 +81,9 @@ $(document).ready(function(){
     }
     
     // inicializando plugin de tags 
-    $('#keywords').tagsInput();
+    $('#keywords').tagsInput({
+    	autocomplete_url: '/SolucaoMovida2/listapalavraschavesjson'
+    });
 
 })
 

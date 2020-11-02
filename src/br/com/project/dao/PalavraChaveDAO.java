@@ -43,14 +43,14 @@ public class PalavraChaveDAO implements PadraoDAO<PerguntaPalavraChave>
 	 * @throws Exception
 	 */
 	public List<PerguntaPalavraChave> listar() throws Exception {
-		this.statement = this.conection.prepareStatement("SELECT * FROM PERGUNTA_PALAVRAS_CHAVES");
+		this.statement = this.conection.prepareStatement("SELECT DISTINCT(PALAVRA), ID FROM PERGUNTA_PALAVRAS_CHAVES");
 
 		List<PerguntaPalavraChave> lista = new ArrayList<PerguntaPalavraChave>();
 
 		result_set = this.statement.executeQuery();
 		Pergunta p = new Pergunta();
 		while( this.result_set.next() )
-			p.setId(result_set.getInt("PERGUNTA_ID"));
+			//p.setId(result_set.getInt("PERGUNTA_ID"));
 		
 			lista.add( new PerguntaPalavraChave(result_set.getInt("ID"), 
 					result_set.getString("Palavra"),

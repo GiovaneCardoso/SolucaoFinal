@@ -10,6 +10,7 @@
 <html lang="en">
 <%
 	ArrayList<PerguntaCategoria> listCategory = (ArrayList<PerguntaCategoria>) request.getAttribute("listCategory");
+	Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
 %>
 <head>
 <meta charset="ISO-8859-1">
@@ -20,6 +21,7 @@
 <link rel="icon" href="imagens/favicon.webp" type="image/x-icon">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="js/jquery.tagsinput.min.js"></script>
 <script src="js/main.js"></script>
 </head>
@@ -77,9 +79,7 @@
 						</div>
 					</div>
 							<% 
-							try {	
-							
-							Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
+							try {
 							PreparedStatement stmt = conn.prepareStatement("select * from perguntas");
 							ResultSet rs = stmt.executeQuery();
 							while(rs.next()) {
@@ -131,8 +131,6 @@
 					<select name="category" class="category-select">
 					<% 
 					try {	
-					
-					Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL","rm86441","021001");
 					PreparedStatement stmt = conn.prepareStatement("select * from pergunta_categoria");
 					ResultSet rs = stmt.executeQuery();
 					while(rs.next()) {
