@@ -27,6 +27,11 @@ public class PerguntaBO
         }
 
         int result = dao.deletar(id);
+        
+        // Deletando palavra chave
+    	PerguntaPalavrachaveBO pcBo = new PerguntaPalavrachaveBO();
+    	pcBo.apagar(id);
+        
 
         dao.close();
 
@@ -111,6 +116,14 @@ public class PerguntaBO
         pergunta.setResposta(pergunta.getResposta().trim());
 
         boolean result = dao.adicionar(pergunta);
+        
+        // Salvando palavra chave
+        if(result) {
+        	int perguntaId = dao.ultimoIdInserido();
+        	pergunta.setId(perguntaId);
+        	PerguntaPalavrachaveBO pcBo = new PerguntaPalavrachaveBO();
+        	pcBo.novo(pergunta);
+        }
 
         dao.close();
 
@@ -154,6 +167,12 @@ public class PerguntaBO
         pergunta.setResposta(pergunta.getResposta().trim());
 
         boolean result = dao.atualizar(pergunta);
+        
+        // Atualizando palavra chave
+        if(result) {
+        	PerguntaPalavrachaveBO pcBo = new PerguntaPalavrachaveBO();
+        	pcBo.atualizar(pergunta);
+        }
 
         dao.close();
 

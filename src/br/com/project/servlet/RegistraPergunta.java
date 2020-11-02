@@ -1,8 +1,12 @@
 package br.com.project.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import br.com.project.beans.Pergunta;
 import br.com.project.beans.PerguntaCategoria;
+import br.com.project.beans.PerguntaPalavraChave;
 
 import br.com.project.dao.*;
 import br.com.project.bo.*;
@@ -36,7 +40,7 @@ public class RegistraPergunta extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PerguntaCategoria c = new PerguntaCategoria();
-		int cat_id = Integer.parseInt(request.getParameter("category"));
+		int cat_id = 1; //Integer.parseInt(request.getParameter("category"));
 		String titulo = request.getParameter("titulo");
 		String pergunta = request.getParameter("pergunta");
 		String resposta = request.getParameter("resposta");
@@ -47,12 +51,25 @@ public class RegistraPergunta extends HttpServlet {
 		p.setPergunta(pergunta);
 		p.setResposta(resposta);
 		
+		
+		//Palavrachaves
+		List<PerguntaPalavraChave> listPalavrachave = new ArrayList<PerguntaPalavraChave>();
+		if(request.getParameter("palavraschave") != null || request.getParameter("palavraschave").trim() != "") {
+			String[] palavraschave = request.getParameter("palavraschave").split(",");
+			for(String sPalavrachave : palavraschave) {
+				listPalavrachave.add(new PerguntaPalavraChave(0, sPalavrachave));
+			}
+		}
+		
+		p.setPalavrasChaves(listPalavrachave);
+		
 		try {
 			if (PerguntaBO.novo(p)) {
+				
 				request.setAttribute("message",
 						"Inserido com sucesso, se precisar cadastrar" + " mais uma pergunta, clique em adicionar: <br>");
 			} else {
-				request.setAttribute("message", "Problema na inserção.");
+				request.setAttribute("message", "Problema na inserï¿½ï¿½o.");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

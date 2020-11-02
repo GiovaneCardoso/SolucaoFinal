@@ -16,10 +16,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jquery.tagsinput.min.css">
 <link rel="icon" href="imagens/favicon.webp" type="image/x-icon">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="js/jquery.tagsinput.min.js"></script>
 <script src="js/main.js"></script>
 </head>
 
@@ -106,6 +107,8 @@
 		<div class="category-actions">
 			<button class="add-category">Adicionar Categoria</button>
 		</div>
+		
+		
 		<div class="hidden answer-modal">
 			<div class="overlay">
 				<div class="overlay-header">
@@ -114,11 +117,16 @@
 				</div>
 				<form method="POST"
 					action="${pageContext.request.contextPath}/registrapergunta">
-					<label>Titulo</label> <input type="text" name="titulo"> <label>Pergunta</label>
-
-					<input type="text" name="pergunta"> <label>Resposta</label>
-
+					<label>Titulo</label> 
+					<input type="text" name="titulo"> 
+					
+					<label>Pergunta</label>
+					<input type="text" name="pergunta"> 
+					
+					<label>Resposta</label>
 					<input type="text" name="resposta">
+					
+					
 					<label>Selecione sua categoria</label>
 					<select name="category" class="category-select">
 					<% 
@@ -138,13 +146,16 @@
 					%>
 					</select>
 
-
+					<label>Palavras Chaves</label>
+					<input type="text" name="palavraschave" id="keywords"> 
+					
 					<button class="overlay-btn">Salvar</button>
 
 				</form>
 			</div>
 		</div>
 
+		<!--  Inicio- Modal de Categoria -->
 		<div class="hidden category-modal">
 			<div class="overlay">
 				<div class="overlay-header">
@@ -162,7 +173,8 @@
 				</form>
 			</div>
 		</div>
-
+		<!--  Fim: Modal de Categoria -->
+		
 	</main>
 	<footer>
 		<section class="footer-site">

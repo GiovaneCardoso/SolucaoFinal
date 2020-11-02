@@ -171,6 +171,14 @@ public class PerguntaDAO implements PadraoDAO<Pergunta>
 
 		return this.statement.executeUpdate();
 	}
+	
+	public int ultimoIdInserido() throws Exception {
+		this.statement = this.conection.prepareStatement("SELECT ID FROM PERGUNTAS WHERE ROWNUM <= 1 ORDER BY ID DESC");
+
+		result_set = this.statement.executeQuery();
+		
+		return result_set.getInt("ID");
+	}
 
 
 }
