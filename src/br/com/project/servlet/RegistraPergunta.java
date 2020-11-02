@@ -40,7 +40,7 @@ public class RegistraPergunta extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PerguntaCategoria c = new PerguntaCategoria();
-		int cat_id = 1; //Integer.parseInt(request.getParameter("category"));
+		int cat_id = Integer.parseInt(request.getParameter("category"));
 		String titulo = request.getParameter("titulo");
 		String pergunta = request.getParameter("pergunta");
 		String resposta = request.getParameter("resposta");
